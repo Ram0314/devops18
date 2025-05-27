@@ -1,4 +1,4 @@
-resource "aws_launch_template" "web_server_asp" {
+resource "aws_launch_template" "web_server" {
     name = "myproject"
     image_id  = "ami-0e58b56aa4d64231b"
     vpc_security_group_ids = [aws_security_group.web_server.id]
@@ -35,7 +35,7 @@ resource "aws_autoscaling_group" "web_server_asg" {
     load_balancers       = [aws_elb.web_server_lb.name]
     availability_zones    = ["us-east-1c", "us-east-1f"] 
     launch_template {
-        id      = aws_launch_template.web_server_asp.id
+        id      = aws_launch_template.web_server.id
         version = "$Latest"
       }
     
