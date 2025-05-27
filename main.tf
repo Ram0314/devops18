@@ -35,7 +35,7 @@ resource "aws_autoscaling_group" "web_server_asg" {
     load_balancers       = [aws_elb.web_server_lb.name]
     availability_zones    = ["us-east-1c", "us-east-1f"] 
     launch_template {
-        id      = aws_launch_template.web_server_as.id
+        id      = aws_launch_template.web_server_asp.id
         version = "$Latest"
       }
     
