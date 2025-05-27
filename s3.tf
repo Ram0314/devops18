@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "one" {
-  bucket = "mus.devops.project.bucket"
+  bucket = "mus.azure.project.bucket"
 }
 
 resource "aws_s3_bucket_ownership_controls" "two" {
