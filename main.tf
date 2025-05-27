@@ -1,5 +1,5 @@
 resource "aws_launch_template" "web_server" {
-    name = "myproject"
+    name = "mypro"
     image_id  = "ami-0e58b56aa4d64231b"
     vpc_security_group_ids = [aws_security_group.web_server.id]
     instance_type = "t2.micro"
