@@ -1,4 +1,4 @@
-resource "aws_launch_template" "web_server_as" {
+resource "aws_launch_template" "web_server_asp" {
     name = "myproject"
     image_id  = "ami-0e58b56aa4d64231b"
     vpc_security_group_ids = [aws_security_group.web_server.id]
